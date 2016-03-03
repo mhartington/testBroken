@@ -2,24 +2,24 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $ionicModal, $state) {
 
-    $scope.goBug = function() {
-        $state.go('tab.viewBug');
-    };
+  $scope.goBug = function() {
+    $state.go('tab.viewBug');
+  };
 
-    $ionicModal.fromTemplateUrl('templates/modal.html', {
-        scope: $scope,
-        animation: 'slide-in-up'
-    }).then(function(modal) {
-        $scope.modal = modal;
-    });
+  $ionicModal.fromTemplateUrl('templates/modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
 
-    $scope.openModal = function() {
-        $scope.modal.show();
-    };
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
 
-    $scope.closeModal = function() {
-        $scope.modal.hide();
-    };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
